@@ -1,7 +1,11 @@
-﻿// Console.WriteLine("Input number");
+﻿
+
+
+// Console.WriteLine("Input number");
 // int num = Convert.ToInt32(Console.ReadLine());
 // int quad = num * num;
 // Console.WriteLine($"Quad of {num} is {quad}");
+
 // Задача 2. Напишите программу, которая на вход принимает 2 числа и проверяет, является ли второе квадратом второго
 
 // Console.WriteLine("Input first number");
@@ -43,9 +47,9 @@
 // Подсказка: сколько осталось от десятки, сколько не хватило до полной 10ти, 
 // то это и есть остаток от деления: 637 -> не хватило 3, но остаток от деления будет 10-3 = 7
 
-Console.WriteLine("Input 3-digit number");
-int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input 3-digit number");
+// int num = Convert.ToInt32(Console.ReadLine());
 
-int result = num % 10;
+// int result = num % 10;
 
-Console.WriteLine($"Last digit of {num} is {result}");
+// Console.WriteLine($"Last digit of {num} is {result}");
