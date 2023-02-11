@@ -1,9 +1,9 @@
 ﻿// Задание 1
 
-Console.WriteLine("GB Lesson");
-int num1 = 5;
-int num2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(num1 + " " + num2);
+// Console.WriteLine("GB Lesson");
+// int num1 = 5;
+// int num2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(num1 + " " + num2);
 
 // Console.WriteLine("Input number");
 // int num = Convert.ToInt32(Console.ReadLine());
@@ -51,9 +51,17 @@ Console.WriteLine(num1 + " " + num2);
 // Подсказка: сколько осталось от десятки, сколько не хватило до полной 10ти, 
 // то это и есть остаток от деления: 637 -> не хватило 3, но остаток от деления будет 10-3 = 7
 
-// Console.WriteLine("Input 3-digit number");
-// int num = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input 3-digit number");
+int num = Convert.ToInt32(Console.ReadLine());
 
-// int result = num % 10;
+int result = num % 10;
 
-// Console.WriteLine($"Last digit of {num} is {result}");
+if(num>=100 && num<=999)
+{
+    Console.WriteLine($"Last digit of {num} is {result}");
+}
+
+else
+{
+    Console.WriteLine("Read about 3-digit numbers and run again");
+}
