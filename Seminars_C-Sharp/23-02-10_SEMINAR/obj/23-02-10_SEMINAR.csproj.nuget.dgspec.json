@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MRU007\\Documents\\Обучение\\2023-01_GB_Разработчик_12 месяцев\\_Обучение\\3. Знакомство с яз. прогр\\2023-02-10_C-1_Знакомство с С#\\23-02-10_SEMINAR\\23-02-10_SEMINAR.csproj": {}
+    "C:\\Users\\MRU007\\Documents\\Обучение\\2023-01_GB_Разработчик_12 месяцев\\_Обучение\\3. Знакомство с яз. прогр\\2023-02-10_C-1_Знакомство с С#\\Seminars_C-Sharp\\23-02-10_SEMINAR\\23-02-10_SEMINAR.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MRU007\\Documents\\Обучение\\2023-01_GB_Разработчик_12 месяцев\\_Обучение\\3. Знакомство с яз. прогр\\2023-02-10_C-1_Знакомство с С#\\23-02-10_SEMINAR\\23-02-10_SEMINAR.csproj": {
+    "C:\\Users\\MRU007\\Documents\\Обучение\\2023-01_GB_Разработчик_12 месяцев\\_Обучение\\3. Знакомство с яз. прогр\\2023-02-10_C-1_Знакомство с С#\\Seminars_C-Sharp\\23-02-10_SEMINAR\\23-02-10_SEMINAR.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MRU007\\Documents\\Обучение\\2023-01_GB_Разработчик_12 месяцев\\_Обучение\\3. Знакомство с яз. прогр\\2023-02-10_C-1_Знакомство с С#\\23-02-10_SEMINAR\\23-02-10_SEMINAR.csproj",
+        "projectUniqueName": "C:\\Users\\MRU007\\Documents\\Обучение\\2023-01_GB_Разработчик_12 месяцев\\_Обучение\\3. Знакомство с яз. прогр\\2023-02-10_C-1_Знакомство с С#\\Seminars_C-Sharp\\23-02-10_SEMINAR\\23-02-10_SEMINAR.csproj",
         "projectName": "23-02-10_SEMINAR",
-        "projectPath": "C:\\Users\\MRU007\\Documents\\Обучение\\2023-01_GB_Разработчик_12 месяцев\\_Обучение\\3. Знакомство с яз. прогр\\2023-02-10_C-1_Знакомство с С#\\23-02-10_SEMINAR\\23-02-10_SEMINAR.csproj",
+        "projectPath": "C:\\Users\\MRU007\\Documents\\Обучение\\2023-01_GB_Разработчик_12 месяцев\\_Обучение\\3. Знакомство с яз. прогр\\2023-02-10_C-1_Знакомство с С#\\Seminars_C-Sharp\\23-02-10_SEMINAR\\23-02-10_SEMINAR.csproj",
         "packagesPath": "C:\\Users\\MRU007\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MRU007\\Documents\\Обучение\\2023-01_GB_Разработчик_12 месяцев\\_Обучение\\3. Знакомство с яз. прогр\\2023-02-10_C-1_Знакомство с С#\\23-02-10_SEMINAR\\obj\\",
+        "outputPath": "C:\\Users\\MRU007\\Documents\\Обучение\\2023-01_GB_Разработчик_12 месяцев\\_Обучение\\3. Знакомство с яз. прогр\\2023-02-10_C-1_Знакомство с С#\\Seminars_C-Sharp\\23-02-10_SEMINAR\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MRU007\\AppData\\Roaming\\NuGet\\NuGet.Config"

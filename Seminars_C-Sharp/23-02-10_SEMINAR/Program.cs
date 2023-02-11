@@ -1,5 +1,9 @@
-﻿
+﻿// Задание 1
 
+Console.WriteLine("GB Lesson");
+int num1 = 5;
+int num2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(num1 + " " + num2);
 
 // Console.WriteLine("Input number");
 // int num = Convert.ToInt32(Console.ReadLine());
