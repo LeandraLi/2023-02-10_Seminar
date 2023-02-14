@@ -3,14 +3,24 @@
 // 456 -> 5
 // 782 -> 8
 // 918 -> 1
-// 
 
+ int ShowDec (int num)
+{
+    int sot = num / 100;
+    int ed = num % 10;
+    return (num - (sot*100 + ed))/10;    
+}
+int randomnumber = new Random().Next(100, 1000);
+Console.WriteLine(randomnumber);
+ShowDec(randomnumber);
+Console.WriteLine(ShowDec(randomnumber));
 
 // Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 // 645 -> 5
 // 78 -> третьей цифры нет
 // 32679 -> 6
-// 
+
+ 
 
 
 // Задача 15: Напишите программу, которая принимает на вход цифру, 
@@ -19,3 +29,5 @@
 // 7 -> да
 // 1 -> нет
 // Обычная проверка значения методом void - 
+
+
