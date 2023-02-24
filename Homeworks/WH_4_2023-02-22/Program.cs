@@ -2,7 +2,23 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
+// int Degree(int numA, int numB)
+// {
+//     int result = 1;
+//     for (int i = 1; i <= numB; i++)
+//     {
+//         result = result * numA;
+//     }
+//     return result;
+// }
 
+// Console.WriteLine("Введите первое число A");
+// int A = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите второе число B");
+// int B = Convert.ToInt32(Console.ReadLine());
+
+// int result = Degree(A, B);
+// Console.WriteLine(result);
 
 
 // Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
