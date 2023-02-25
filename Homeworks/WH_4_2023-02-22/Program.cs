@@ -26,8 +26,21 @@
 // 82 -> 10
 // 9012 -> 12
 
+int Sum(int num)
+{
+    
+    for(int i=0;i<=num;i++)
+    {
+        
+    }
 
+}
 
+Console.WriteLine("Введите число");
+int number = Convert.ToInt32(Console.ReadLine());
+
+int result = Sum();
+Console.WriteLine(result);
 
 // Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
