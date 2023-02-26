@@ -26,24 +26,55 @@
 // 82 -> 10
 // 9012 -> 12
 
-int Sum(int num)
+int SumDigits(int number)
 {
-    
-    for(int i=0;i<=num;i++)
+    int result=0;
+    while(number > 0)
     {
-        
+        result += number %10;
+        number = number/10;
     }
-
+    return result;
+    
 }
 
 Console.WriteLine("Введите число");
-int number = Convert.ToInt32(Console.ReadLine());
+int num = Convert.ToInt32(Console.ReadLine());
 
-int result = Sum();
-Console.WriteLine(result);
+SumDigits(num);
+Console.WriteLine($"Сумма чисел введённого числа равна: {SumDigits(num)}");
+
 
 // Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
 
+// void FillArray(int[] collection)
+// {
+//     int length = collection.Length;
+//     int index = 0;
+//     while (index < length)
+//     {
+//         collection[index] = new Random().Next(1,10);
+//         index++;
+//     }
+// }
+
+// void PrintArray(int[] col)
+// {
+//     int count = col.Length;
+//     int position = 0;
+//     while(position < count)
+//     {
+//         Console.WriteLine(col[position]);
+//         position++;
+//     }
+// }
+
+// int[] array = new int [8]; // это если задаём рандомный массив из 8ми элементов и печатаем его (2 метода используем)
+// FillArray(array);
+
+
+// int[] array = {6, 1, 33}; // это если мы заданный массив вводим, а потом печатем его методом PrintArray
+// PrintArray(array);
 
