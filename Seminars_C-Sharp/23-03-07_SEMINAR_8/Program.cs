@@ -163,73 +163,73 @@
 // на пересечении которых расположен наименьший элемент.
 // то есть удалаем и строку и столбец в которой находится этот элемент
 
-int[,] Create2DRandomArray(int rows, int colums, int minValue, int maxValue)
-{
-    int[,] newArray = new int[rows, colums];
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < colums; j++)
-        {
-            newArray[i, j] = new Random().Next(minValue, maxValue + 1);
-        }
-    }
-    return newArray;
-}
+// int[,] Create2DRandomArray(int rows, int colums, int minValue, int maxValue)
+// {
+//     int[,] newArray = new int[rows, colums];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < colums; j++)
+//         {
+//             newArray[i, j] = new Random().Next(minValue, maxValue + 1);
+//         }
+//     }
+//     return newArray;
+// }
 
-void Show2DArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            Console.Write(array[i, j] + " ");
-        }
-        Console.WriteLine();
-    }
-    Console.WriteLine();
-}
+// void Show2DArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i, j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
 
-int[,] DeleteMinRowsColums(int[,] array)
-{
-    int minRow = 0;
-    int minColum = 0;
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (array[i, j] < array[minRow, minColum])
-            {
-                minRow = i;
-                minColum = j;
-            }
-        }
-    }
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        array[i, minColum] = 0;
-    }
-    for (int i = 0; i < array.GetLength(1); i++)
-    {
-        array[minRow, i] = 0;
-    }
+// int[,] DeleteMinRowsColums(int[,] array)
+// {
+//     int minRow = 0;
+//     int minColum = 0;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (array[i, j] < array[minRow, minColum])
+//             {
+//                 minRow = i;
+//                 minColum = j;
+//             }
+//         }
+//     }
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         array[i, minColum] = 0;
+//     }
+//     for (int i = 0; i < array.GetLength(1); i++)
+//     {
+//         array[minRow, i] = 0;
+//     }
 
-    return array;
-}
+//     return array;
+// }
 
 
-Console.WriteLine("Введите количество строк массива: ");
-int rows = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите количество столбцов массива: ");
-int colums = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите минимальное число массива: ");
-int minValue = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите максимальное число массива: ");
-int maxValue = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите количество строк массива: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите количество столбцов массива: ");
+// int colums = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите минимальное число массива: ");
+// int minValue = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите максимальное число массива: ");
+// int maxValue = Convert.ToInt32(Console.ReadLine());
 
-int[,] array = Create2DRandomArray(rows, colums, minValue, maxValue);
-Show2DArray(array);
+// int[,] array = Create2DRandomArray(rows, colums, minValue, maxValue);
+// Show2DArray(array);
 
-array = DeleteMinRowsColums(array);
-Show2DArray(array);
+// array = DeleteMinRowsColums(array);
+// Show2DArray(array);
 
 
