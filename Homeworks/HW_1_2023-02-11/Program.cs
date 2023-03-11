@@ -58,12 +58,12 @@
 // 5 -> 2, 4
 // 8 -> 2, 4, 6, 8
 
-Console.WriteLine("Input number");
-int N = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input number: ");
+int n = Convert.ToInt32(Console.ReadLine());
 
 int current = 1;
 
-while(current <= N)
+while(current <= n)
 {
     if(current%2==0)
     Console.Write(current + " ");
