@@ -157,7 +157,7 @@
 
 
 //--------------------------------------------------------------------------------------------------------------------
-// Задача 58: Задайте две матрицы. 
+// + Задача 58: Задайте две матрицы. 
 // Напишите программу, которая будет находить произведение двух матриц.
 // Например, даны 2 матрицы:
 // 2 4 | 3 4
@@ -253,7 +253,55 @@
 // 26(1,0,1) 55(1,1,1)
 
 
+int[,,] CreateMatrix (int row, int col, int dep, int min, int max) 
+{
+    int[,,] matrix = new int[row, col, dep];
+    Random rnd = new Random();   
+    for (int i = 0; i < matrix.GetLength(0); i++) 
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            for (int k = 0; k < matrix.GetLength(2); k++)
+                {
+                    matrix[i,j,k] = rnd.Next(min, max);
+                }
+        }
+    }
+    return matrix;
+} 
+ 
+void PrintMatrix(int[,,] matrix)
+{
+    for (int i = 0; i <  matrix.GetLength(0); i++)
+    {
+        
+        for (int j = 0; j < matrix.GetLength(1); j++) 
+        {
+            
+            for (int k = 0; k < matrix.GetLength(2); k++)
+            {
+            Console.Write($"{matrix}({i},{j},{k})|");            
+            }
+            Console.WriteLine();
+        }     
+    }        
+}
 
+Console.Write("Input number of rows in matrix: ");
+int row = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input number of columns in matrix: ");
+int col = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input depth of matrix: ");
+int dep = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input minimal value of array element: ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input max value of array element: ");
+int max = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine();
+
+int[,,] array3D = CreateMatrix(row, col, dep, min, max);
+PrintMatrix(array3D);
+Console.WriteLine();
 
 
 //--------------------------------------------------------------------------------------------------------------------
