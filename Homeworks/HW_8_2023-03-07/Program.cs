@@ -253,55 +253,101 @@
 // 26(1,0,1) 55(1,1,1)
 
 
-int[,,] CreateMatrix (int row, int col, int dep, int min, int max) 
+// int[,,] CreateMatrix (int row, int col, int dep, int min, int max) 
+// {
+//     int[,,] matrix = new int[row, col, dep];
+//     Random rnd = new Random();
+//     for (int i = 0; i < matrix.GetLength(0); i++) 
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             for (int k = 0; k < matrix.GetLength(2); k++)
+//                 {
+//                     matrix[i,j,k] = rnd.Next(min, max);
+//                 }
+//         }
+//     }
+//     return matrix;
+// } 
+
+// void PrintMatrix(int[,,] matrix)
+// {
+//     for (int i = 0; i <  matrix.GetLength(0); i++)
+//     {
+
+//         for (int j = 0; j < matrix.GetLength(1); j++) 
+//         {
+
+//             for (int k = 0; k < matrix.GetLength(2); k++)
+//             {
+//             Console.Write($"{matrix}({i},{j},{k})| ");            
+//             }
+//             Console.WriteLine();
+//         }     
+//     }        
+// }
+
+// Console.Write("Input number of rows in matrix: ");
+// int row = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input number of columns in matrix: ");
+// int col = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input depth of matrix: ");
+// int dep = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input minimal value in matrix: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input max value in matrix: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
+
+// int[,,] array3D = CreateMatrix(row, col, dep, min, max);
+// PrintMatrix(array3D);
+// Console.WriteLine();
+
+
+//--
+//V2:
+
+int[,,] Random3dArray(int field, int rows, int columns)
 {
-    int[,,] matrix = new int[row, col, dep];
-    Random rnd = new Random();   
-    for (int i = 0; i < matrix.GetLength(0); i++) 
+    int[,,] newArray = new int[field, rows, columns];
+    for (int i = 0; i < field; i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < rows; j++)
         {
-            for (int k = 0; k < matrix.GetLength(2); k++)
-                {
-                    matrix[i,j,k] = rnd.Next(min, max);
-                }
+            for (int k = 0; k < columns; k++)
+            {
+                newArray[i, j, k] = i + j + k;
+            }
         }
     }
-    return matrix;
-} 
- 
-void PrintMatrix(int[,,] matrix)
-{
-    for (int i = 0; i <  matrix.GetLength(0); i++)
-    {
-        
-        for (int j = 0; j < matrix.GetLength(1); j++) 
-        {
-            
-            for (int k = 0; k < matrix.GetLength(2); k++)
-            {
-            Console.Write($"{matrix}({i},{j},{k})|");            
-            }
-            Console.WriteLine();
-        }     
-    }        
+    return newArray;
 }
 
-Console.Write("Input number of rows in matrix: ");
-int row = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input number of columns in matrix: ");
-int col = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input depth of matrix: ");
-int dep = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input minimal value of array element: ");
-int min = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input max value of array element: ");
-int max = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine();
+void Show3dArray(int[,,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            for (int k = 0; k < array.GetLength(2); k++)
+            {
+                Console.Write(array[i, j, k] + "(" + i + "," + j + "," + k + ") ");
+            }
+            Console.WriteLine();
+        }
+    }
+    Console.WriteLine();
+}
 
-int[,,] array3D = CreateMatrix(row, col, dep, min, max);
-PrintMatrix(array3D);
-Console.WriteLine();
+Console.Write("Input number of rows: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input number of columns: ");
+int l = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input number of field: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+int[,,] array = Random3dArray(m, n, l);
+Show3dArray(array);
 
 
 //--------------------------------------------------------------------------------------------------------------------
@@ -311,6 +357,8 @@ Console.WriteLine();
 // 12 13 14 05
 // 11 16 15 06
 // 10 09 08 07
+
+
 
 
 
