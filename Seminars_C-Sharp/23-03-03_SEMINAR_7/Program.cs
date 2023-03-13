@@ -4,7 +4,7 @@
 // int[,] Create2DRandomArray(int columns, int rows, int minValue, int maxValue)
 // {
 //     int[,] newArrray = new int[rows, columns]; //1. Выделяем память под наш создаваемый массив
-//     //2. Теперь начнём заполнять массив и перемещаться по строкам и столбцам^
+//     //2. Теперь начнём заполнять массив и перемещаться по строкам и столбцам:
 //     for (int i = 0; i < rows; i++)
 //     {
 //         for (int j = 0; j < columns; j++)
