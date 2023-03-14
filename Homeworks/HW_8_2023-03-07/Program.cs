@@ -315,8 +315,88 @@
 // 10 09 08 07
 
 
+// int[,] Create2DSpiralArray(int columns, int rows)
+// {
+//     int[,] newArray = new int[4, 4];
+
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < columns; j++)
+//         {
+//             newArray[i, j] = ;
+//         }
+//     }
+//     return newArray;
+// }
+
+// void Show2DArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i,j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine(); 
+// }
 
 
 
+// Console.WriteLine("Input number of rows");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of columns");
+// int columns = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input minimal value of array element");
+// int minValue = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input max value of array element");
+// int maxValue = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
 
+// int[,] array = Create2DSpiralArray(columns, rows, minValue, maxValue);
+// Console.WriteLine("Generated 2D random array: ");
+// Show2DArray(array);
+
+
+// Вариант решения не по семинарам:
+
+int n = 4;
+int[,] sqareMatrix = new int[n, n];
+
+int temp = 1;
+int i = 0;
+int j = 0;
+
+while (temp <= sqareMatrix.GetLength(0) * sqareMatrix.GetLength(1))
+{
+  sqareMatrix[i, j] = temp;
+  temp++;
+  if (i <= j + 1 && i + j < sqareMatrix.GetLength(1) - 1)
+    j++;
+  else if (i < j && i + j >= sqareMatrix.GetLength(0) - 1)
+    i++;
+  else if (i >= j && i + j > sqareMatrix.GetLength(1) - 1)
+    j--;
+  else
+    i--;
+}
+
+WriteArray(sqareMatrix);
+
+void WriteArray (int[,] array)
+{
+  for (int i = 0; i < array.GetLength(0); i++)
+  {
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+      if (array[i,j] / 10 <= 0)
+      Console.Write($" {array[i,j]} ");
+
+      else Console.Write($"{array[i,j]} ");
+    }
+    Console.WriteLine();
+  }
+}
+  
 
