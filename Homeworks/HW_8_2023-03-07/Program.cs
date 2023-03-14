@@ -244,7 +244,7 @@
 
 
 //--------------------------------------------------------------------------------------------------------------------
-// Задача 60. Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
+// + Задача 60. Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
 // Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
 // Массив размером 2 x 2 x 2
 // 66(0,0,0) 25(0,1,0)
@@ -253,38 +253,40 @@
 // 26(1,0,1) 55(1,1,1)
 
 
-// int[,,] CreateMatrix (int row, int col, int dep, int min, int max) 
+// int[,,] CreateMatrix(int row, int col, int dep, int min, int max)
 // {
 //     int[,,] matrix = new int[row, col, dep];
 //     Random rnd = new Random();
-//     for (int i = 0; i < matrix.GetLength(0); i++) 
+//     for (int i = 0; i < matrix.GetLength(0); i++)
 //     {
 //         for (int j = 0; j < matrix.GetLength(1); j++)
 //         {
 //             for (int k = 0; k < matrix.GetLength(2); k++)
-//                 {
-//                     matrix[i,j,k] = rnd.Next(min, max);
-//                 }
+//             {
+//                 matrix[i, j, k] = rnd.Next(min, max);
+//             }
 //         }
 //     }
 //     return matrix;
-// } 
+// }
 
 // void PrintMatrix(int[,,] matrix)
 // {
-//     for (int i = 0; i <  matrix.GetLength(0); i++)
+//     for (int i = 0; i < matrix.GetLength(0); i++)
 //     {
 
-//         for (int j = 0; j < matrix.GetLength(1); j++) 
+//         for (int j = 0; j < matrix.GetLength(1); j++)
 //         {
 
 //             for (int k = 0; k < matrix.GetLength(2); k++)
 //             {
-//             Console.Write($"{matrix}({i},{j},{k})| ");            
+//                 Console.Write($"{matrix[i, j, k] }({i},{j},{k}) | ");
 //             }
 //             Console.WriteLine();
-//         }     
-//     }        
+//         }
+//     Console.WriteLine();
+//     }
+
 // }
 
 // Console.Write("Input number of rows in matrix: ");
@@ -302,52 +304,6 @@
 // int[,,] array3D = CreateMatrix(row, col, dep, min, max);
 // PrintMatrix(array3D);
 // Console.WriteLine();
-
-
-//--
-//V2:
-
-int[,,] Random3dArray(int field, int rows, int columns)
-{
-    int[,,] newArray = new int[field, rows, columns];
-    for (int i = 0; i < field; i++)
-    {
-        for (int j = 0; j < rows; j++)
-        {
-            for (int k = 0; k < columns; k++)
-            {
-                newArray[i, j, k] = i + j + k;
-            }
-        }
-    }
-    return newArray;
-}
-
-void Show3dArray(int[,,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            for (int k = 0; k < array.GetLength(2); k++)
-            {
-                Console.Write(array[i, j, k] + "(" + i + "," + j + "," + k + ") ");
-            }
-            Console.WriteLine();
-        }
-    }
-    Console.WriteLine();
-}
-
-Console.Write("Input number of rows: ");
-int m = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input number of columns: ");
-int l = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input number of field: ");
-int n = Convert.ToInt32(Console.ReadLine());
-
-int[,,] array = Random3dArray(m, n, l);
-Show3dArray(array);
 
 
 //--------------------------------------------------------------------------------------------------------------------
