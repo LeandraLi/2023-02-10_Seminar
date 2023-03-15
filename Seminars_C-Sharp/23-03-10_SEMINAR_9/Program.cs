@@ -2,19 +2,20 @@
 //N = 5 -> "1, 2, 3, 4, 5"
 //N = 6 -> "1, 2, 3, 4, 5, 6"
 
-// void ShowNumbers(int n)
-// {
-//     if (n>=1)
-//     {
-//         ShowNumbers(n-1);
-//         Console.Write(n + " ");
-//     }
-// }
+void ShowNumbers(int n)
+{
+    if (n>=1)
+    {
+        ShowNumbers(n-1);
+        Console.Write(n + " ");
+        
+    }
+}
 
-// Console.WriteLine("Input N: ");
-// int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input N: ");
+int n = Convert.ToInt32(Console.ReadLine());
 
-// ShowNumbers(n);
+ShowNumbers(n);
 
 
 //Задание 2. Напишите программу, которая будет принимать на вход число и возвращать сумму его цифр.
@@ -53,17 +54,17 @@
 //A = 3; B = 5 -> 243 (3⁵)
 //A = 2; B = 3 -> 8
 
-int FindPow(int a, int b)
-{
-    if (b >= 1) return FindPow(a, b - 1) * a;
-    else return 1;
-}
+// int FindPow(int a, int b)
+// {
+//     if (b >= 1) return FindPow(a, b - 1) * a;
+//     else return 1;
+// }
 
-Console.Write("Введите значение A: ");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите значение B: ");
-int b = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите значение A: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите значение B: ");
+// int b = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine($"Искомое число: {FindPow(a, b)}");
+// Console.WriteLine($"Искомое число: {FindPow(a, b)}");
 
 
